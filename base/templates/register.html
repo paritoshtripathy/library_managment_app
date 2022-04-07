@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="header-bar">
+    <a href="{% url 'admin-panel'%}">&#8592; Back</a><h1 id="reg">Register</h1>
+
+</div>
+
+<div class="card-body">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <input class="button" type="submit" value="Register" style="margin-top: 10px;">
+    </form>
+    
+
+</div>
+
+
+
+
+{% endblock content %}
